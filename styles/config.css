@@ -1,0 +1,514 @@
+/* Estilos específicos para a página de configurações */
+.config-container {
+    background-color: var(--secondary-bg);
+    width: 90%;
+    max-width: 500px;
+    min-height: 80vh;
+    border-radius: 20px;
+    margin: 100px auto 80px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-pink);
+    color: var(--primary-bg);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.back-button:hover {
+    background-color: var(--accent-teal);
+    transform: scale(1.1);
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 30px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-teal);
+    box-shadow: 0 0 20px rgba(8, 217, 214, 0.3);
+    margin-bottom: 15px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.edit-profile {
+    background-color: transparent;
+    color: var(--accent-pink);
+    border: 1px solid var(--accent-pink);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-profile:hover {
+    background-color: rgba(255, 46, 99, 0.1);
+    transform: translateY(-2px);
+}
+
+.settings-content {
+    margin-top: 20px;
+}
+
+.settings-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent-teal);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.settings-group {
+    margin-bottom: 25px;
+}
+
+.settings-group h3 {
+    color: var(--accent-teal);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.setting-item span {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.setting-value {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.setting-btn {
+    background-color: var(--accent-pink);
+    color: var(--primary-bg);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setting-btn:hover {
+    background-color: var(--accent-teal);
+    transform: translateY(-2px);
+}
+
+/* Switch toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--card-bg);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-teal);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Volume slider */
+.volume-slider {
+    width: 100px;
+    height: 6px;
+    -webkit-appearance: none;
+    background: var(--card-bg);
+    border-radius: 3px;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-teal);
+    cursor: pointer;
+}
+
+/* Logout button */
+.logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: var(--accent-pink);
+    margin: 30px auto 0;
+    color: var(--primary-bg);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ff4757;
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .config-container {
+        width: 95%;
+        padding: 20px;
+        margin: 80px auto;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .settings-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    
+    .setting-btn, .switch {
+        align-self: flex-end;
+    }
+    
+    .volume-slider {
+        width: 80px;
+    }
+}
+
+/* TEMAS */
+
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-option:hover {
+    transform: scale(1.05);
+}
+
+.theme-preview {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.theme-option.active .theme-preview {
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 3px rgba(8, 217, 214, 0.3);
+}
+
+.theme-option span {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+/* Estilos para os botões de tema */
+.theme-options {
+    display: flex;
+    gap: 8px;
+}
+
+.theme-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.theme-option:hover {
+    transform: scale(1.1);
+}
+
+.theme-option.active {
+    border-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+/* Estilos para os modais de alteração (nome, email, senha) */
+.alteracao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.alteracao span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.alteracao label {
+    color: var(--accent-teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.alteracao input {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.alteracao input:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 2px rgba(8, 217, 214, 0.3);
+}
+
+#confirmarAlteracao {
+    background-color: var(--accent-teal);
+    color: var(--primary-bg);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#confirmarAlteracao:hover {
+    background-color: var(--accent-pink);
+    transform: translateY(-2px);
+}
+
+/* Estilos para o modal de edição de foto */
+.divFoto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 90%;
+    max-width: 450px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.divFoto h2 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#spanFoto {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#inputFoto {
+    flex: 1;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+#inputFoto:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 2px rgba(8, 217, 214, 0.3);
+}
+
+#confirmarFoto {
+    background-color: var(--accent-teal);
+    color: var(--primary-bg);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#confirmarFoto:hover {
+    background-color: var(--accent-pink);
+    transform: translateY(-2px);
+}
+
+#previewFoto {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#previewFoto img {
+    border-radius: 8px;
+    border: 2px solid var(--accent-teal);
+}
+
+/* Overlay para os modais */
+.alteracao::before,
+.divFoto::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsivo para os modais */
+@media (max-width: 480px) {
+    .alteracao, .divFoto {
+        padding: 20px;
+    }
+    
+    #spanFoto {
+        flex-direction: column;
+    }
+    
+    #confirmarFoto {
+        width: 100%;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Configurações | PlayWave</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/config.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+        <script type="module" src="js/config.js " defer></script>
+        <script type="module" src="js/perfil.js " defer></script>
+        <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">PW</span>
+            <h1>Play<span>Wave</span></h1>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="playlists.html"><i class="fas fa-music"></i> Playlists</a></li>
+                <li><a href="sugestoes.html"><i class="fas fa-lightbulb"></i> Sugestões</a></li>
+                <li id="config"><a href="configuracoes.html" class="active"><i class="fas fa-cog"></i> Configurações</a></li>
+                <li><a href="FAQ.html">💬 FAQS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-menu">
+            <img src="" alt="Foto do usuário" class="user-avatar" class="imgUser">
+            <span class="username" id="userName">Usuario</span>
+        </div>
+    </header>
+    
+    <main class="config-container">
+        <button class="back-button" onclick="history.back()" aria-label="Voltar">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="" alt="Foto de perfil" class="imgUser">
+            </div>
+            <h2 class="username" id="nomeConfig"></h2>
+            <button class="edit-profile">
+                <i class="fas fa-pencil-alt"></i> Editar foto
+            </button>
+        </div>
+
+        <div class="settings-content">
+            <h2 class="settings-title"><i class="fas fa-cog"></i> CONFIGURAÇÕES</h2>
+            
+            <div class="settings-group">
+                <h3>Conta</h3>
+                <div class="setting-item">
+                    <span><i class="fas fa-envelope"></i> Alterar Nome</span>
+                
+                    <button class="setting-btn" id="alterarNome">Alterar</button>
+                </div>
+                <div class="setting-item">
+                    <span><i class="fas fa-envelope"></i> Alterar Email</span>
+                
+                    <button class="setting-btn" id="alterarEmail">Alterar</button>
+                </div>
+                <div class="setting-item">
+                    <span><i class="fas fa-lock"></i> Alterar Senha</span>
+                    <button class="setting-btn" id="alterarSenha">Alterar</button>
+                </div>
+            </div>
+
+            <div class="settings-group">
+               
+                 <div class="setting-item">
+    <span><i class="fas fa-palette"></i> Tema do Site</span>
+    <div class="theme-options">
+        <button class="theme-option" data-theme="dark" style="background: #000000;"></button>
+        <button class="theme-option" data-theme="light" style="background: #f5f5f5;"></button>
+        <button class="theme-option" data-theme="purple" style="background: #3b3c96;"></button>
+        <button class="theme-option" data-theme="pink" style="background: #a33493;"></button>
+        <button class="theme-option" data-theme="orange" style="background: #cc4008;"></button>
+    </div>
+</div>
+               
+            </div>
+
+            <div class="settings-group">
+                <h3>Sobre</h3>
+                <div class="setting-item">
+                    <span><i class="fas fa-code-branch"></i> Versão do App</span>
+                    <span class="setting-value">1.0.0</span>
+                </div>
+                <div class="setting-item">
+                    <span><i class="fas fa-file-alt"></i> Termos de Uso</span>
+                    <button class="setting-btn">Visualizar</button>
+                </div>
+                <div class="setting-item">
+                    <span><i class="fas fa-shield-alt"></i> Política de Privacidade</span>
+                    <button class="setting-btn">Visualizar</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="logout-button" aria-label="Sair da conta">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Sair da Conta</span>
+        </button>
+    </main>
+    
+    <footer class="main-footer">
+        <!-- Rodapé igual ao da index.html -->
+    </footer>
+    
+</body>
+</html>

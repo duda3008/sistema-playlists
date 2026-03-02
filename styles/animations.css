@@ -1,0 +1,87 @@
+/* Animações gerais */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Aplicando animações */
+.hero-content {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-image {
+    animation: slideUp 1s ease-out 0.3s both;
+}
+
+.playlist-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.playlist-card:nth-child(1) { animation-delay: 0.1s; }
+.playlist-card:nth-child(2) { animation-delay: 0.2s; }
+.playlist-card:nth-child(3) { animation-delay: 0.3s; }
+.playlist-card:nth-child(4) { animation-delay: 0.4s; }
+
+.mood-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:hover {
+    animation: pulse 0.5s ease;
+}
+
+/* Efeitos de hover */
+.cta-button:hover {
+    animation: pulse 1s infinite;
+}
+
+.mood-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.mood-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mood-card:hover::after {
+    opacity: 1;
+}
+
+/* Animação de fundo */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
